@@ -29,6 +29,8 @@ else{
 	json.put("result", 0);
 	json.put("message","로그인 실패입니다.ㅜㅜ");
 }
+
+dao.close();//커넥션풀에 자원반납
 String jsonStr = json.toJSONString();
 out.print(jsonStr);
 %>
